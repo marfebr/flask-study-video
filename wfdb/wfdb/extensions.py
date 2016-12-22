@@ -10,6 +10,9 @@ from flask_debugtoolbar import DebugToolbarExtension
 from flask_cache import Cache
 
 from flask_assets import Environment
+#Testar no linux nao funciona no windos
+#from flask_celery import Celery
+#from celery.backends.redis import RedisBackend
 
 from flask_mail import Mail
 #from wfdb.models import User
@@ -21,6 +24,9 @@ toolbar = DebugToolbarExtension()
 
 cache  = Cache()
 assets_env = Environment()
+
+#celery = Celery()
+#celery.backend = RedisBackend(app=celery)
 
 mail  = Mail()
 

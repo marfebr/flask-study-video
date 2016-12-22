@@ -8,6 +8,7 @@ from . import app
 
 class TestModels(unittest.TestCase):
     def setUp(self):
+        
         db.app = app
         db.create_all()
 

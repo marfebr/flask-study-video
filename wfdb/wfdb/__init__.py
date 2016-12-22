@@ -21,12 +21,15 @@ from wfdb.controllers.main import main_blueprint
 from wfdb.controllers.blog import blog_blueprint
 from wfdb.extensions import login_manager, principal, rest_api, admin, toolbar, cache, assets_env, mail
 
+
 from wfdb.assets import main_js, main_css
 
 from wfdb.controllers.rest.movie import MovieAPI
 from wfdb.controllers.rest.actor import ActorAPI
 
 from wfdb.controllers.rest.auth import AuthAPI
+
+#from wfdb.tasks import echo
 
 from wfdb.controllers.admin import ModelView, CustomView, CustomModelView, ActorView, UserView, CustomFileView
 
@@ -42,6 +45,7 @@ def create_app(config_object):
     cache.init_app(app)
     assets_env.init_app(app)
     mail.init_app(app)
+
 
     assets_env.register('main_js', main_js)
     assets_env.register('main_css', main_css)

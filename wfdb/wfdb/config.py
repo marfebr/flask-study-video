@@ -12,8 +12,19 @@ class DevConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///database.db'
     DEBUG = True
     CACHE_TYPE = 'simple'
-    ASSETS_DEBUG = False
+    ASSETS_DEBUG = True
     MAIL_SERVER = 'vinagreira.uft.edu.br'
     MAIL_PORT = 25
     MAIL_USERNAME = 'naoresponder@dti.uftedu.br'
     MAIL_PASSWORD = '45F/#A(4'
+
+    CELERY_BROKER_URL = "redis://localhost:6379/0"
+    CELERY_BACKEND_URL = "redis://localhost:6379/0"
+
+
+class TestConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'sqlite://'
+    DEBUG = True
+    CACHE_TYPE = 'null'
+    WTR_CSRF_ENABLED = False
+    
