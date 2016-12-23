@@ -5,7 +5,8 @@ class Config(object):
 
 class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///database.db'
-    DEBUG = True
+    DEBUG = False
+    WTR_CSRF_ENABLED = True
 
 
 class DevConfig(Config):

@@ -1,6 +1,0 @@
-env
-.vscode
-*.pyc
-wfdb/
-wfdb/controllers/*.pyc
-wfdb/tests/*.pyc
