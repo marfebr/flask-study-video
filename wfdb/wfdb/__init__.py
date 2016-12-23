@@ -19,7 +19,17 @@ from wfdb.models import (
     )
 from wfdb.controllers.main import main_blueprint
 from wfdb.controllers.blog import blog_blueprint
-from wfdb.extensions import login_manager, principal, rest_api, admin, toolbar, cache, assets_env, mail
+
+from wfdb.extensions import (
+    login_manager,
+    principal,
+    rest_api,
+    admin,
+    toolbar,
+    cache,
+    assets_env,
+    mail, celery
+    )
 
 
 from wfdb.assets import main_js, main_css
@@ -29,7 +39,7 @@ from wfdb.controllers.rest.actor import ActorAPI
 
 from wfdb.controllers.rest.auth import AuthAPI
 
-#from wfdb.tasks import echo
+from wfdb.tasks import echo
 
 from wfdb.controllers.admin import ModelView, CustomView, CustomModelView, ActorView, UserView, CustomFileView
 
@@ -45,6 +55,7 @@ def create_app(config_object):
     cache.init_app(app)
     assets_env.init_app(app)
     mail.init_app(app)
+    celery.init_app(app)
 
 
     assets_env.register('main_js', main_js)

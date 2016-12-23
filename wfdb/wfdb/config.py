@@ -21,6 +21,8 @@ class DevConfig(Config):
     CELERY_BROKER_URL = "redis://localhost:6379/0"
     CELERY_BACKEND_URL = "redis://localhost:6379/0"
 
+    
+
 
 class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite://'

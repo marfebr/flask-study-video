@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "${workspaceRoot}/env/bin/python",
+    "python.autoComplete.extraPaths": [
+        "/home/aislan/google_appengine",
+        "/home/aislan/google_appengine/lib"
+    ]
+}
